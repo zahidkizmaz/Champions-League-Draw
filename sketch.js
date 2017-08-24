@@ -1,9 +1,42 @@
+var pot1 = "Real Madrid, Bayern Munich, Juventus, Benfica, Chelsea, Shakhtar Donetsk, Monaco, Spartak Moscow".split(", ");
+var pot2 = "Barcelona, Atletico Madrid, Paris Saint-Germain, Borussia Dortmund, Sevilla, Manchester City, Porto, Manchester United".split(", ");
+var pot3 = "Napoli, Tottenham, FC Basel, Roma, Besiktas, Olympiakos, Anderlecht, Liverpool".split(", ");
+var pot4 = "Celtic, CSKA Moscow, Sporting CP, APOEL, Feyenoord, Maribor, Qarabag, RB Leipzig".split(", ");
+
+var groupa = [];
+var groupb = [];
+var groupc = [];
+var groupd = [];
+var groupe = [];
+var groupf = [];
+var groupg = [];
+var grouph = [];
+
+function getRandomTeam(pot){
+  var random_number = Math.floor(Math.random()* pot.length);
+  var elem = pot1.splice(random_number,1);
+  return elem;
+}
+
 function setup() {
-  createCanvas(500,500);
-  background(0);
+  	stroke(0);
+  	createCanvas(1224,1288);
+
+    print(getRandomTeam(pot1));
 }
 
 function draw() {
-  rect(50,50,50,50);
-  fill(255,0,0);
+  	background(255,255,255);
+    rect(50,50,250,250);
+    rect(300,50,250,250);
+    rect(550,50,250,250);
+    rect(800,50,250,250);
+    rect(50,350,250,250);
+    rect(300,350,250,250);
+    rect(550,350,250,250);
+    rect(800,350,250,250);
+    fill(255,255,255);
+
+
+
 }
