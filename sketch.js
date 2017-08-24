@@ -14,15 +14,33 @@ var grouph = [];
 
 function getRandomTeam(pot){
   var random_number = Math.floor(Math.random()* pot.length);
-  var elem = pot1.splice(random_number,1);
+  var elem = pot.splice(random_number,1)[0];
   return elem;
 }
 
 function setup() {
   	stroke(0);
   	createCanvas(1224,1288);
+    var pots = [pot1,pot2,pot3,pot4];
+    for (var i = 0; i < pots.length; i++) {
+      groupa.push(getRandomTeam(pots[i]));
+      groupb.push(getRandomTeam(pots[i]));
+      groupc.push(getRandomTeam(pots[i]));
+      groupd.push(getRandomTeam(pots[i]));
+      groupe.push(getRandomTeam(pots[i]));
+      groupf.push(getRandomTeam(pots[i]));
+      groupg.push(getRandomTeam(pots[i]));
+      grouph.push(getRandomTeam(pots[i]));
+    }
+    print(groupa);
+    print(groupb);
+    print(groupc);
+    print(groupd);
+    print(groupe);
+    print(groupf);
+    print(groupg);
+    print(grouph);
 
-    print(getRandomTeam(pot1));
 }
 
 function draw() {
